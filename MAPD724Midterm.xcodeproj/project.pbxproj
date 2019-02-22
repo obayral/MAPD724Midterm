@@ -15,6 +15,14 @@
 		ED4E7295221F6DB70089391B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4E7293221F6DB70089391B /* Main.storyboard */; };
 		ED4E7297221F6DC20089391B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4E7296221F6DC20089391B /* Assets.xcassets */; };
 		ED4E729A221F6DC20089391B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4E7298221F6DC20089391B /* LaunchScreen.storyboard */; };
+		ED4E72A6221F7C370089391B /* banana.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4E72A3221F7C360089391B /* banana.png */; };
+		ED4E72A7221F7C370089391B /* cherry.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4E72A4221F7C370089391B /* cherry.png */; };
+		ED4E72A8221F7C370089391B /* grape.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4E72A5221F7C370089391B /* grape.png */; };
+		ED4E72AA221F7CC10089391B /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E72A9221F7CC10089391B /* GameObject.swift */; };
+		ED4E72AC221F7D3F0089391B /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E72AB221F7D3F0089391B /* GameProtocol.swift */; };
+		ED4E72AE221F7E570089391B /* Banana.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E72AD221F7E570089391B /* Banana.swift */; };
+		ED4E72B0221F809E0089391B /* Cherry.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E72AF221F809E0089391B /* Cherry.swift */; };
+		ED4E72B2221F80D20089391B /* Grape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E72B1221F80D20089391B /* Grape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		ED4E7296221F6DC20089391B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4E7299221F6DC20089391B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED4E729B221F6DC20089391B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED4E72A3221F7C360089391B /* banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = banana.png; path = ../../../../Desktop/banana.png; sourceTree = "<group>"; };
+		ED4E72A4221F7C370089391B /* cherry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cherry.png; path = ../../../../Desktop/cherry.png; sourceTree = "<group>"; };
+		ED4E72A5221F7C370089391B /* grape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grape.png; path = ../../../../Desktop/grape.png; sourceTree = "<group>"; };
+		ED4E72A9221F7CC10089391B /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		ED4E72AB221F7D3F0089391B /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
+		ED4E72AD221F7E570089391B /* Banana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banana.swift; sourceTree = "<group>"; };
+		ED4E72AF221F809E0089391B /* Cherry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cherry.swift; sourceTree = "<group>"; };
+		ED4E72B1221F80D20089391B /* Grape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +86,11 @@
 				ED4E7296221F6DC20089391B /* Assets.xcassets */,
 				ED4E7298221F6DC20089391B /* LaunchScreen.storyboard */,
 				ED4E729B221F6DC20089391B /* Info.plist */,
+				ED4E72A9221F7CC10089391B /* GameObject.swift */,
+				ED4E72AB221F7D3F0089391B /* GameProtocol.swift */,
+				ED4E72AD221F7E570089391B /* Banana.swift */,
+				ED4E72AF221F809E0089391B /* Cherry.swift */,
+				ED4E72B1221F80D20089391B /* Grape.swift */,
 			);
 			path = MAPD724Midterm;
 			sourceTree = "<group>";
@@ -77,6 +98,9 @@
 		ED4E72A2221F73470089391B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				ED4E72A3221F7C360089391B /* banana.png */,
+				ED4E72A4221F7C370089391B /* cherry.png */,
+				ED4E72A5221F7C370089391B /* grape.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -141,6 +165,9 @@
 			files = (
 				ED4E7295221F6DB70089391B /* Main.storyboard in Resources */,
 				ED4E728C221F6DB70089391B /* GameScene.sks in Resources */,
+				ED4E72A6221F7C370089391B /* banana.png in Resources */,
+				ED4E72A8221F7C370089391B /* grape.png in Resources */,
+				ED4E72A7221F7C370089391B /* cherry.png in Resources */,
 				ED4E7297221F6DC20089391B /* Assets.xcassets in Resources */,
 				ED4E729A221F6DC20089391B /* LaunchScreen.storyboard in Resources */,
 				ED4E728E221F6DB70089391B /* Actions.sks in Resources */,
@@ -154,8 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4E72AA221F7CC10089391B /* GameObject.swift in Sources */,
+				ED4E72AC221F7D3F0089391B /* GameProtocol.swift in Sources */,
 				ED4E7290221F6DB70089391B /* GameScene.swift in Sources */,
 				ED4E7292221F6DB70089391B /* GameViewController.swift in Sources */,
+				ED4E72AE221F7E570089391B /* Banana.swift in Sources */,
+				ED4E72B2221F80D20089391B /* Grape.swift in Sources */,
+				ED4E72B0221F809E0089391B /* Cherry.swift in Sources */,
 				ED4E728A221F6DB70089391B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
