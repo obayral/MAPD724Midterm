@@ -178,6 +178,25 @@ class GameScene: SKScene {
                 
                 if(ownedMoney < 100) {
                     print("Game Over")
+                    
+                    if (touchedNode.name == "playAgain"){
+                        winCheckArray.removeAll()
+                        banana?.removeFromParent()
+                        banana2?.removeFromParent()
+                        banana3?.removeFromParent()
+                        cherry?.removeFromParent()
+                        cherry2?.removeFromParent()
+                        cherry3?.removeFromParent()
+                        grape?.removeFromParent()
+                        grape2?.removeFromParent()
+                        grape3?.removeFromParent()
+                        ownedMoney = 1000
+                        moneyChange = 0
+                        if let gameScene = GameScene(fileNamed: "GameScene") {
+                            gameScene.scaleMode = .aspectFill
+                            view?.presentScene(gameScene)
+                        }
+                    }
                 }else{
                     
                     for n in 1...3 {
