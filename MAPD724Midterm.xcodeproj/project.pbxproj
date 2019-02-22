@@ -23,6 +23,8 @@
 		ED4E72AE221F7E570089391B /* Banana.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E72AD221F7E570089391B /* Banana.swift */; };
 		ED4E72B0221F809E0089391B /* Cherry.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E72AF221F809E0089391B /* Cherry.swift */; };
 		ED4E72B2221F80D20089391B /* Grape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E72B1221F80D20089391B /* Grape.swift */; };
+		ED4E72B72220BF670089391B /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED4E72B52220BF670089391B /* lose.mp3 */; };
+		ED4E72B82220BF670089391B /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED4E72B62220BF670089391B /* win.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		ED4E72AD221F7E570089391B /* Banana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banana.swift; sourceTree = "<group>"; };
 		ED4E72AF221F809E0089391B /* Cherry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cherry.swift; sourceTree = "<group>"; };
 		ED4E72B1221F80D20089391B /* Grape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grape.swift; sourceTree = "<group>"; };
+		ED4E72B52220BF670089391B /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = lose.mp3; path = ../../../../Desktop/lose.mp3; sourceTree = "<group>"; };
+		ED4E72B62220BF670089391B /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = win.mp3; path = ../../../../Desktop/win.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		ED4E727D221F6DB60089391B = {
 			isa = PBXGroup;
 			children = (
+				ED4E72B42220BF180089391B /* sounds */,
 				ED4E72A2221F73470089391B /* images */,
 				ED4E7288221F6DB70089391B /* MAPD724Midterm */,
 				ED4E7287221F6DB70089391B /* Products */,
@@ -103,6 +108,16 @@
 				ED4E72A5221F7C370089391B /* grape.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		ED4E72B42220BF180089391B /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				ED4E72B52220BF670089391B /* lose.mp3 */,
+				ED4E72B62220BF670089391B /* win.mp3 */,
+			);
+			name = sounds;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +180,10 @@
 			files = (
 				ED4E7295221F6DB70089391B /* Main.storyboard in Resources */,
 				ED4E728C221F6DB70089391B /* GameScene.sks in Resources */,
+				ED4E72B72220BF670089391B /* lose.mp3 in Resources */,
 				ED4E72A6221F7C370089391B /* banana.png in Resources */,
 				ED4E72A8221F7C370089391B /* grape.png in Resources */,
+				ED4E72B82220BF670089391B /* win.mp3 in Resources */,
 				ED4E72A7221F7C370089391B /* cherry.png in Resources */,
 				ED4E7297221F6DC20089391B /* Assets.xcassets in Resources */,
 				ED4E729A221F6DC20089391B /* LaunchScreen.storyboard in Resources */,
@@ -337,6 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2BULHRS882;
 				INFOPLIST_FILE = MAPD724Midterm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,6 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2BULHRS882;
 				INFOPLIST_FILE = MAPD724Midterm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

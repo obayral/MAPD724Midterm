@@ -30,7 +30,7 @@ class GameScene: SKScene {
     var grape3: Grape?
     
     
-    var gameOverLabel: SKLabelNode!
+    var gameOverLabel = SKLabelNode(text: "")
     var score = SKLabelNode(text: "Score")
     var exitLabel = SKLabelNode(text: "Exit Game")
     var moneyLabel = SKLabelNode(text: "")
@@ -39,18 +39,30 @@ class GameScene: SKScene {
     var x:Int = 3
     var ownedMoney:Int = 1000
     var moneyChange:Int = 0
-    
+    var isGameOver: Bool = false
     
     
     
     
     override func didMove(to view: SKView) {
         
+        do {
+            let sounds:[String] = ["win", "lose"]
+            for sound in sounds {
+                let path:String = Bundle.main.path(forResource: sound, ofType: "mp3")!
+                let url: URL = URL(fileURLWithPath: path)
+                let player:AVAudioPlayer = try AVAudioPlayer(contentsOf: url)
+                player.prepareToPlay()
+            }
+        } catch {
+        }
+
+        
         score.name="score"
         score.position.x = 0
         score.position.y = 450
         score.fontColor = UIColor.red
-        score.fontSize = 30.0
+        score.fontSize = 50.0
         score.zPosition = 5
         score.fontName = "Arial Bold"
         // score.text = "Your Score is : 0"
@@ -60,7 +72,7 @@ class GameScene: SKScene {
         exitLabel.position.x = 0
         exitLabel.position.y = -530
         exitLabel.fontColor = UIColor.red
-        exitLabel.fontSize = 30.0
+        exitLabel.fontSize = 50.0
         exitLabel.zPosition = 5
         exitLabel.fontName = "Arial Bold"
         // score.text = "Your Score is : 0"
@@ -69,11 +81,19 @@ class GameScene: SKScene {
         status.position.x = 0
         status.position.y = 300
         status.fontColor = UIColor.red
-        status.fontSize = 30.0
+        status.fontSize = 50.0
         status.zPosition = 5
         status.fontName = "Arial Bold"
         addChild(status)
         
+        
+        gameOverLabel.name = "gameOverLabel"
+        gameOverLabel.position.x = 0
+        gameOverLabel.position.y = 0
+        gameOverLabel.fontColor = UIColor.red
+        gameOverLabel.fontSize = 100.0
+        gameOverLabel.zPosition = 5
+        gameOverLabel.fontName = "Arial Bold"
         /*
          lb1.position.x = -250
          lb1.position.y = 0
@@ -114,9 +134,9 @@ class GameScene: SKScene {
         
         playAgain.name = "playAgain"
         playAgain.position.x = 0
-        playAgain.position.y = -450
+        playAgain.position.y = -350
         playAgain.fontColor = UIColor.red
-        playAgain.fontSize = 30.0
+        playAgain.fontSize = 60.0
         playAgain.zPosition = 5
         playAgain.fontName = "Arial Bold"
         addChild(playAgain)
@@ -162,7 +182,8 @@ class GameScene: SKScene {
             let location = touch.location(in: self)
             let touchedNode = atPoint(location)
             if touchedNode.name == "playAgain" {
-                //Random Number Generated between 1 and 4
+                
+                gameOverLabel.removeFromParent()
                 winCheckArray.removeAll()
                 banana?.removeFromParent()
                 banana2?.removeFromParent()
@@ -176,10 +197,24 @@ class GameScene: SKScene {
                 ownedMoney -= 50
                 moneyChange -= 50
                 
-                if(ownedMoney < 100) {
+                if(ownedMoney < 50) {
+                    self.run(SKAction.playSoundFileNamed("lose", waitForCompletion: false))
                     print("Game Over")
+                    gameOverLabel.name = "gameOverLabel"
+                    gameOverLabel.position.x = 0
+                    gameOverLabel.position.y = 0
+                    gameOverLabel.fontColor = UIColor.white
+                    gameOverLabel.fontSize = 100.0
+                    gameOverLabel.zPosition = 5
+                    gameOverLabel.fontName = "Arial Bold"
+                    gameOverLabel.text = "GAME OVER"
+                    playAgain.text = "Press to Play Again"
+                    addChild(gameOverLabel)
+
+                    playAgain.text = "Press to Play Again"
                     
-                    if (touchedNode.name == "playAgain"){
+                    if ((touchedNode.name == "playAgain")&&isGameOver==true){
+                        
                         winCheckArray.removeAll()
                         banana?.removeFromParent()
                         banana2?.removeFromParent()
@@ -196,6 +231,8 @@ class GameScene: SKScene {
                             gameScene.scaleMode = .aspectFill
                             view?.presentScene(gameScene)
                         }
+                    }else if((touchedNode.name == "playAgain")&&isGameOver==false){
+                        isGameOver=true
                     }
                 }else{
                     
@@ -265,11 +302,13 @@ class GameScene: SKScene {
                     
                     if((winCheckArray[0] == winCheckArray[1]) && (winCheckArray[1] == winCheckArray[2]))
                     {
-                        ownedMoney += 400
-                        moneyChange += 400
-                        
+                        ownedMoney += 300
+                        moneyChange += 300
+                        self.run(SKAction.playSoundFileNamed("win", waitForCompletion: false))
                         print(ownedMoney)
                     }
+                    
+                    
                     if(moneyChange>0){
                         score.text = "You win :" + String(moneyChange)
                     }else{
