@@ -44,6 +44,7 @@
 		ED4E727D221F6DB60089391B = {
 			isa = PBXGroup;
 			children = (
+				ED4E72A2221F73470089391B /* images */,
 				ED4E7288221F6DB70089391B /* MAPD724Midterm */,
 				ED4E7287221F6DB70089391B /* Products */,
 			);
@@ -71,6 +72,13 @@
 				ED4E729B221F6DC20089391B /* Info.plist */,
 			);
 			path = MAPD724Midterm;
+			sourceTree = "<group>";
+		};
+		ED4E72A2221F73470089391B /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
