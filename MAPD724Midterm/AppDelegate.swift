@@ -1,7 +1,7 @@
 //
 //  AppDelegate.swift
 //  MAPD724Midterm
-//
+//  Student ID: 301029119
 //  Created by Oguz Bayral on 21.02.2019.
 //  Copyright © 2019 CentennialCollege. All rights reserved.
 //
@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //Launch Screen is diplayed 
         Thread.sleep(forTimeInterval: 2.0)
         // Override point for customization after application launch.
         return true
